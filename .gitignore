@@ -1,0 +1,6 @@
+*.pyc
+workflow/
+arxiv/
+feedparser.py*
+applescript/
+requests/
