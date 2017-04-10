@@ -5,7 +5,7 @@
 
 """
 Usage:
-    papers3.py <search_query>
+    arxiv.py <search_query>
 """
 
 from __future__ import print_function
