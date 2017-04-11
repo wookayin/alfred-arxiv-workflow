@@ -6,6 +6,29 @@
 	<string>kr.wook.alfred-arxiv-workflow</string>
 	<key>connections</key>
 	<dict>
+		<key>04FAE5E3-4E3A-4C45-99DA-5A0A93AF188F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ABF44A93-47F8-4995-A8FB-8F972096FFAE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F0044CEE-2197-48CE-B31B-244C668438E9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>684A5219-C08B-478D-9D1B-91771318AE81</key>
 		<array>
 			<dict>
@@ -23,6 +46,16 @@
 				<string>271DA279-E92A-4B88-83AE-EEF4AEC48255</string>
 				<key>modifiers</key>
 				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>04FAE5E3-4E3A-4C45-99DA-5A0A93AF188F</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
@@ -95,6 +128,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://arxiv.org/pdf/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>271DA279-E92A-4B88-83AE-EEF4AEC48255</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>argumenttype</key>
@@ -138,21 +190,28 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string># Pass through the {query}
+
+query=$1
+echo -n "https://arxiv.org/abs/$query"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
 				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://arxiv.org/pdf/{query}</string>
-				<key>utf8</key>
-				<true/>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>271DA279-E92A-4B88-83AE-EEF4AEC48255</string>
+			<string>04FAE5E3-4E3A-4C45-99DA-5A0A93AF188F</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -178,12 +237,29 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>F0044CEE-2197-48CE-B31B-244C668438E9</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string># Pass through the {query} (citekey, e.g. Choi:2016)
+				<string># Pass through the {query}
 
 query=$1
 echo -n $query</string>
@@ -201,75 +277,67 @@ echo -n $query</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>F0044CEE-2197-48CE-B31B-244C668438E9</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>04FAE5E3-4E3A-4C45-99DA-5A0A93AF188F</key>
+		<dict>
+			<key>note</key>
+			<string>Copy arXiv abs URL</string>
+			<key>xpos</key>
+			<integer>400</integer>
+			<key>ypos</key>
+			<integer>280</integer>
+		</dict>
 		<key>271DA279-E92A-4B88-83AE-EEF4AEC48255</key>
 		<dict>
 			<key>note</key>
 			<string>Open PDF</string>
 			<key>xpos</key>
-			<integer>430</integer>
+			<integer>600</integer>
 			<key>ypos</key>
-			<integer>170</integer>
+			<integer>100</integer>
 		</dict>
 		<key>684A5219-C08B-478D-9D1B-91771318AE81</key>
 		<dict>
 			<key>xpos</key>
 			<integer>120</integer>
 			<key>ypos</key>
-			<integer>100</integer>
+			<integer>200</integer>
 		</dict>
 		<key>79BC9E3D-DE43-457F-8DEA-8CCBE9993BC0</key>
 		<dict>
 			<key>note</key>
-			<string>Echo identifier</string>
+			<string>Copy arXiv identifier</string>
 			<key>xpos</key>
-			<integer>430</integer>
+			<integer>400</integer>
 			<key>ypos</key>
-			<integer>330</integer>
+			<integer>430</integer>
 		</dict>
 		<key>ABF44A93-47F8-4995-A8FB-8F972096FFAE</key>
 		<dict>
 			<key>xpos</key>
 			<integer>640</integer>
 			<key>ypos</key>
-			<integer>290</integer>
+			<integer>320</integer>
 		</dict>
 		<key>B513E510-DDDB-4D68-A4DA-4AD0BED36DDD</key>
 		<dict>
 			<key>note</key>
 			<string>Open abs page</string>
 			<key>xpos</key>
-			<integer>430</integer>
+			<integer>450</integer>
 			<key>ypos</key>
-			<integer>30</integer>
+			<integer>10</integer>
 		</dict>
 		<key>F0044CEE-2197-48CE-B31B-244C668438E9</key>
 		<dict>
 			<key>xpos</key>
 			<integer>640</integer>
 			<key>ypos</key>
-			<integer>400</integer>
+			<integer>430</integer>
 		</dict>
 	</dict>
 	<key>version</key>

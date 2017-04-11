@@ -45,12 +45,14 @@ def main(wf):
         url = entry['id']
 
         identifier, version = parse_arxiv_url(url)     # 1704.12345
+        canonical_url = 'https://arxiv.org/abs/%s' % identifier
 
         wf.add_item(
             title="[%s] %s" % (identifier, title),
             subtitle="%s [%s]" % (authors, bundle),
             modifier_subtitles={
                 'shift' : ('Copy the identifier %s' % identifier),
+                'cmd' : ('Copy the arXiv abs URL: %s' % canonical_url),
                 'alt' : ('http://arxiv.org/pdf/%s' % identifier),
             },
             valid=True,
