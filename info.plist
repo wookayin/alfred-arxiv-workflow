@@ -71,8 +71,41 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>CB0E287E-52F8-4B90-9F00-4DAA9175BCE9</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>79BC9E3D-DE43-457F-8DEA-8CCBE9993BC0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ABF44A93-47F8-4995-A8FB-8F972096FFAE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F0044CEE-2197-48CE-B31B-244C668438E9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CB0E287E-52F8-4B90-9F00-4DAA9175BCE9</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -198,7 +231,7 @@
 				<string># Pass through the {query}
 
 query=$1
-echo -n "https://arxiv.org/abs/$query"</string>
+echo -n $query</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -277,6 +310,32 @@ echo -n $query</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string># Pass through the {query}
+
+query=$1
+echo -n $query</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>CB0E287E-52F8-4B90-9F00-4DAA9175BCE9</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -296,7 +355,7 @@ echo -n $query</string>
 			<key>note</key>
 			<string>Open PDF</string>
 			<key>xpos</key>
-			<integer>600</integer>
+			<integer>640</integer>
 			<key>ypos</key>
 			<integer>100</integer>
 		</dict>
@@ -331,6 +390,15 @@ echo -n $query</string>
 			<integer>450</integer>
 			<key>ypos</key>
 			<integer>10</integer>
+		</dict>
+		<key>CB0E287E-52F8-4B90-9F00-4DAA9175BCE9</key>
+		<dict>
+			<key>note</key>
+			<string>Copy Markdown Link</string>
+			<key>xpos</key>
+			<integer>400</integer>
+			<key>ypos</key>
+			<integer>570</integer>
 		</dict>
 		<key>F0044CEE-2197-48CE-B31B-244C668438E9</key>
 		<dict>
