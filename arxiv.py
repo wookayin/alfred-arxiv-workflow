@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # arXiv
-# Copyright (c) 2016 Jongwook Choi (@wookayin)
+# Copyright (c) 2017 Jongwook Choi (@wookayin)
 
 """
 Usage:
