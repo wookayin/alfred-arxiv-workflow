@@ -4,3 +4,7 @@ arxiv/
 feedparser.py*
 applescript/
 requests/
+certifi/
+chardet/
+idna/
+urllib3/
