@@ -23,6 +23,33 @@ def parse_arxiv_url(text):
     return identifier, v
 
 
+def generate_bibtex(entry):
+    url = entry['id']
+
+    identifier, version = parse_arxiv_url(url)     # 1704.12345
+    canonical_url = 'https://arxiv.org/abs/%s' % identifier
+
+    title = entry['title']
+    year = entry['published_parsed'].tm_year
+    authors = entry['authors']   # list
+
+    # last name of the first author
+    repr_author = authors[0].split(' ')[-1]
+
+    return '''@article{%s:%s,
+author = {%s},
+title = {{%s}},
+year = {%s},
+eprint = {%s},
+eprinttype = {arXiv},
+}''' % (repr_author, identifier,
+        ' and '.join(authors),
+        title,
+        year,
+        identifier,
+        )
+
+
 def main(wf):
     import argparse
     parser = argparse.ArgumentParser(description=__doc__)
@@ -62,8 +89,8 @@ def main(wf):
                           arg=identifier)
         item.add_modifier('cmd', 'Copy the arXiv abs URL: %s' % canonical_url,
                           arg=canonical_url)
-        item.add_modifier('ctrl', 'Copy markdown link: [[%s] %s](%s)' % (identifier, title, canonical_url),
-                          arg="[[%s] %s](%s)" % (identifier, title, canonical_url))
+        item.add_modifier('ctrl', 'Copy BibTeX entry of %s into clipboard' % identifier,
+                          arg=generate_bibtex(entry))
 
     wf.send_feedback()
     return 0

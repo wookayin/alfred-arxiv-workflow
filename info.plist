@@ -324,8 +324,7 @@ echo -n $query</string>
 				<key>script</key>
 				<string># Pass through the {query}
 
-query=$1
-echo -n $query</string>
+echo -n "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -398,7 +397,7 @@ echo -n $query</string>
 		<key>CB0E287E-52F8-4B90-9F00-4DAA9175BCE9</key>
 		<dict>
 			<key>note</key>
-			<string>Copy Markdown Link</string>
+			<string>Copy BibTeX</string>
 			<key>xpos</key>
 			<integer>400</integer>
 			<key>ypos</key>
