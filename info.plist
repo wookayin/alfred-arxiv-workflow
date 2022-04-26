@@ -43,16 +43,6 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>271DA279-E92A-4B88-83AE-EEF4AEC48255</string>
-				<key>modifiers</key>
-				<integer>524288</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>04FAE5E3-4E3A-4C45-99DA-5A0A93AF188F</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
@@ -147,7 +137,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://arxiv.org/abs/{query}</string>
+				<string>{query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -161,29 +151,12 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://arxiv.org/pdf/{query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>271DA279-E92A-4B88-83AE-EEF4AEC48255</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -203,9 +176,9 @@
 				<key>runningsubtext</key>
 				<string>Searching...</string>
 				<key>script</key>
-				<string>python2 arxiv.py "{query}"</string>
+				<string>./node_modules/.bin/run-node query.js "$1"</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
@@ -222,7 +195,7 @@
 			<key>uid</key>
 			<string>684A5219-C08B-478D-9D1B-91771318AE81</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -278,6 +251,8 @@ echo -n $query</string>
 				<false/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
 				<key>transient</key>
 				<false/>
 			</dict>
@@ -286,7 +261,7 @@ echo -n $query</string>
 			<key>uid</key>
 			<string>F0044CEE-2197-48CE-B31B-244C668438E9</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -353,15 +328,6 @@ echo -n "$1"</string>
 			<key>ypos</key>
 			<integer>280</integer>
 		</dict>
-		<key>271DA279-E92A-4B88-83AE-EEF4AEC48255</key>
-		<dict>
-			<key>note</key>
-			<string>Open PDF</string>
-			<key>xpos</key>
-			<integer>640</integer>
-			<key>ypos</key>
-			<integer>100</integer>
-		</dict>
 		<key>684A5219-C08B-478D-9D1B-91771318AE81</key>
 		<dict>
 			<key>xpos</key>
@@ -390,9 +356,9 @@ echo -n "$1"</string>
 			<key>note</key>
 			<string>Open abs page</string>
 			<key>xpos</key>
-			<integer>450</integer>
+			<integer>400</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>85</integer>
 		</dict>
 		<key>CB0E287E-52F8-4B90-9F00-4DAA9175BCE9</key>
 		<dict>

@@ -1,11 +1,2 @@
-*.pyc
-workflow/
-arxiv/
-feedparser.py*
-applescript/
-requests/
-
-chardet/
-idna/
-urllib3/
-certifi/
+node_modules/
+package-lock.json

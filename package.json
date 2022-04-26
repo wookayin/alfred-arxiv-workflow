@@ -1,0 +1,29 @@
+{
+  "name": "alfred-arxiv",
+  "version": "2.0.0",
+  "description": "Alfred workflow to search arXiv.org",
+  "author": {
+    "name": "Jongwook Choi",
+    "url": "https://github.com/wookayin",
+    "email": "wookayin@gmail.com"
+  },
+  "homepage": "https://github.com/wookayin/alfred-arxiv-workflow",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "alfred-npms": "^2.1.0",
+    "alfy": "^0.12.1",
+    "arxiv-api": "^1.1.1"
+  },
+  "scripts": {
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup"
+  },
+  "keywords": [
+    "Alfred",
+    "Alfred workflow",
+    "alfy",
+    "arxiv"
+  ]
+}
