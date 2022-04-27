@@ -39,15 +39,18 @@ M.query_arxiv = async function(input) {
 };
 
 M.generate_bibtex = function(p) {
+  // Use google scholar style bibitem identifier.
+  // e.g., @article{lastname2021firstword ... }
+  // TODO: Make it configurable.
   var repr_author = p.authors[0].split(' ');
-  repr_author = repr_author[repr_author.length - 1];
+  repr_author = repr_author[repr_author.length - 1].toLowerCase(); // last name
+  var title_word = p.title.replace('-', ' ').split(' ')[0].toLowerCase();
 
-  return `@article{${repr_author}:${p.id},
-author = {${p.authors.join(' and ')}},
-title = {{${p.title}}},
-year = {${p.year}},
-eprint = {${p.id}},
-eprinttype = {arXiv},
+  return `@article{${repr_author}${p.year}${title_word},
+  title = {{${p.title}}},
+  author = {${p.authors.join(' and ')}},
+  journal = {arXiv preprint arXiv:${p.id}},
+  year = {${p.year}},
 }
 `;
 };
