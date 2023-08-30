@@ -448,7 +448,7 @@ echo -n "$1"</string>
 	<key>userconfigurationconfig</key>
 	<array/>
 	<key>version</key>
-	<string>2.1-dev</string>
+	<string>2.1</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
