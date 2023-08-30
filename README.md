@@ -1,10 +1,10 @@
 Alfred arXiv Workflow
 =====================
 
-Alfred 3 workflow to search via [arXiv search API](https://arxiv.org/help/api/index).
+Alfred 3-5 workflow to search via [arXiv search API](https://arxiv.org/help/api/index).
 
 <p align="center">
-<img alt="arXiv workflow" src="./screenshot.png" width="70%" />
+<img alt="arXiv workflow" src="https://github.com/wookayin/alfred-arxiv-workflow/raw/master/screenshot.png" width="70%" />
 </p>
 
 Usage: `arxiv <query>`
