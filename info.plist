@@ -33,6 +33,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>8BCEAD2E-4EC1-463D-A2AC-A2724E500902</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>B513E510-DDDB-4D68-A4DA-4AD0BED36DDD</string>
 				<key>modifiers</key>
 				<integer>524288</integer>
@@ -134,12 +144,35 @@
 			<dict>
 				<key>browser</key>
 				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>{query}</string>
-				<key>utf8</key>
-				<true/>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>8BCEAD2E-4EC1-463D-A2AC-A2724E500902</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
@@ -343,66 +376,77 @@ echo -n "$1"</string>
 			<key>note</key>
 			<string>Copy arXiv abs URL</string>
 			<key>xpos</key>
-			<integer>400</integer>
+			<real>400</real>
 			<key>ypos</key>
-			<integer>280</integer>
+			<real>280</real>
 		</dict>
 		<key>332C70B0-95E7-4908-93CA-F96D15A0E740</key>
 		<dict>
 			<key>xpos</key>
-			<integer>645</integer>
+			<real>645</real>
 			<key>ypos</key>
-			<integer>575</integer>
+			<real>575</real>
 		</dict>
 		<key>684A5219-C08B-478D-9D1B-91771318AE81</key>
 		<dict>
 			<key>xpos</key>
-			<integer>120</integer>
+			<real>120</real>
 			<key>ypos</key>
-			<integer>200</integer>
+			<real>200</real>
 		</dict>
 		<key>79BC9E3D-DE43-457F-8DEA-8CCBE9993BC0</key>
 		<dict>
 			<key>note</key>
 			<string>Copy arXiv identifier</string>
 			<key>xpos</key>
-			<integer>400</integer>
+			<real>400</real>
 			<key>ypos</key>
-			<integer>430</integer>
+			<real>430</real>
 		</dict>
-		<key>ABF44A93-47F8-4995-A8FB-8F972096FFAE</key>
-		<dict>
-			<key>xpos</key>
-			<integer>640</integer>
-			<key>ypos</key>
-			<integer>320</integer>
-		</dict>
-		<key>B513E510-DDDB-4D68-A4DA-4AD0BED36DDD</key>
+		<key>8BCEAD2E-4EC1-463D-A2AC-A2724E500902</key>
 		<dict>
 			<key>note</key>
 			<string>Open abs page</string>
 			<key>xpos</key>
-			<integer>400</integer>
+			<real>400</real>
 			<key>ypos</key>
-			<integer>85</integer>
+			<real>15</real>
+		</dict>
+		<key>ABF44A93-47F8-4995-A8FB-8F972096FFAE</key>
+		<dict>
+			<key>xpos</key>
+			<real>640</real>
+			<key>ypos</key>
+			<real>320</real>
+		</dict>
+		<key>B513E510-DDDB-4D68-A4DA-4AD0BED36DDD</key>
+		<dict>
+			<key>note</key>
+			<string>Open PDF directly</string>
+			<key>xpos</key>
+			<real>400</real>
+			<key>ypos</key>
+			<real>145</real>
 		</dict>
 		<key>CB0E287E-52F8-4B90-9F00-4DAA9175BCE9</key>
 		<dict>
 			<key>note</key>
 			<string>Copy BibTeX</string>
 			<key>xpos</key>
-			<integer>400</integer>
+			<real>400</real>
 			<key>ypos</key>
-			<integer>570</integer>
+			<real>570</real>
 		</dict>
 		<key>F0044CEE-2197-48CE-B31B-244C668438E9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>640</integer>
+			<real>640</real>
 			<key>ypos</key>
-			<integer>430</integer>
+			<real>430</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>version</key>
 	<string>2.1-dev</string>
 	<key>webaddress</key>
